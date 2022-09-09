@@ -94,6 +94,7 @@ class ProdutoRepository with ChangeNotifier {
 
     String? msg;
     if (res.isValue) {
+      _lista.clear();
       _lista.addAll(res.asValue!.value);
       _actionResult = ActionResult.success;
       _statusData = DataStatus.loaded;

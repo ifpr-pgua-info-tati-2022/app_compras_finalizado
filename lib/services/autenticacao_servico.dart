@@ -28,6 +28,7 @@ class ServicoAutenticacao with ChangeNotifier {
     }
 
     final url = Uri.https(urlDominio, endPoint, {'key': API_KEY});
+
     final response = await http.post(
       url,
       body: json.encode(
